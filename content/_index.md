@@ -4,17 +4,21 @@ layout: landing
 
 <div class="book-hero">
 
-# Documentation {anchor=false}
-This content is rendered from `content/index.md`
+# Parayu {anchor=false}
+An ESP32-S3 wireless audio streaming device that transcribes speech in real time — Malayalam, English, or both.
 
-{{<button href="/docs/">}}Action{{</button>}}
+{{<button href="/docs/">}}Get Started{{</button>}}
+{{<button href="/docs/websocket-protocol/" relref="/docs/websocket-protocol/">}}Protocol Reference{{</button>}}
 
 </div>
 
 {{% columns %}}
-- ## Nunc infans rigidique etiam
-  Lorem markdownum quondam mediamque visis aevi, peregrinaeque Aeacidae, vita vos? Iacet exhortatus picta plures; placet Pandrose tremescere; mediis aera enim resonat scinditur dea nocuit fabrilis est per. Signum pater paventes pectore maris humo, aegide illos religarat si! Romana secutis erat, cum omnia vincere virtutem nomine ascensu poenas? Gradus cum quoque potitur.
+- ## Speak, it listens
+  Captures audio from an INMP441 MEMS microphone over I2S, streams raw PCM to your server over WebSocket, and shows live transcriptions in the browser — all on a device smaller than your palm.
 
-- ## Carmina fallacia polluit lenta
-  Lorem markdownum, omnes exire lumen noctis concava multaque fieri inplevere oculi *nisi sua* subigebat iamque? Herse sum `hardBox`, pervenit linguae altera. Clymenen magna illi latera parent omnia felicia ter bifurcum nulla atque alta cannas ita? Pariter stetit carina adspexerit spargentem festa concrevit `process_upnp` primos! Huic et sulphure paelice iuppiter vitat quem genitas, fera vertice relinque.
+- ## Zero-friction setup
+  On first boot the device opens a WiFi access point. Connect your phone, open the captive portal, enter your network credentials and server address. Done — no reflashing, no config files.
+
+- ## Built for real speech
+  Powered by the Sarvam `saaras:v3` model in codemix mode — handles natural Malayalam + English code-switching without needing to pick a language upfront.
 {{% /columns %}}
