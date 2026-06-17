@@ -1,26 +1,67 @@
-name: Build with Hugo
+name: Deploy Hugo site to GitHub Pages
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+# Required for the GitHub Pages deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one deployment at a time; do not cancel in-progress runs
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
+  # ── Build ────────────────────────────────────────────────────────────────────
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        hugo-version:
-          - 'latest'
-          - '0.158.0'
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout (with theme submodule)
+        uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive   # pulls in themes/hugo-book
+          fetch-depth: 0          # full history for .GitInfo / .Lastmod
 
-      - name: Setup Hugo
+      - name: Setup Hugo (extended)
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: ${{ matrix.hugo-version }}
-          extended: true
+          hugo-version: latest
+          extended: true          # required for SCSS in hugo-book
 
-      - name: Run Hugo
-        run: hugo --minify
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        # Outputs steps.pages.outputs.base_url — used so internal links
+        # resolve correctly when served from a repo sub-path, e.g.
+        # https://rishi-k-s.github.io/parayu-docs/
+
+      - name: Build
+        env:
+          HUGO_ENV: production
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public   # Hugo output directory
+
+  # ── Deploy (push to main only) ───────────────────────────────────────────────
+  deploy:
+    if: github.event_name == 'push'   # skip deploy on pull_request
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,44 +1,50 @@
-# Vir nidis Phrygiae ambarum
+# Parayu
 
-## Moenia alis vendit inquit
+**Parayu** is an ESP32-S3 based wireless audio streaming device that captures microphone input, streams it over WebSocket to a server, and transcribes it in real time using the Sarvam AI speech-to-text API.
 
-Lorem markdownum Cauno eburno pectore matremque animal illae positoris refert
-nectaris. Quod cecidere timido, fudit, dura urnam tuos; **iubis**. Ea concepit
-gravem quod *est vides* mariti minus, de curva inter, **Maeonias licet**, tum.
-Duobus mentis portentificisque crescit nutricisque tenax? *Nec digiti* crescunt
-Neve!
+The name *Parayu* (പറയൂ) is Malayalam for **"speak"**.
 
-1. Cultus vitamque egerere nutrit procis caecae et
-2. Infelix non
-3. Sperchios fuit quod pharetra verborum
-4. Quicquam cum haec bona
-5. Nubila Finierat
-6. Quod nec exequialia
+---
 
-## Miserere murmura riguisse
+## What it does
 
-Substiterat deponunt dentes. Nec estque volant, mendacia iubent, et merui terram
-Cerealis ipso quoque fronte; erat suco.
+1. An ESP32-S3-WROOM-1-N16R8 captures audio from an INMP441 MEMS microphone via I2S.
+2. The device connects to your WiFi network (configured via a captive portal on first boot).
+3. Raw 16-bit PCM audio is streamed over WebSocket to a Python/FastAPI server on your LAN.
+4. The server buffers the audio, wraps it in WAV format, and sends it to the Sarvam `saaras:v3` streaming STT model.
+5. Transcripts appear live in a minimal web UI accessible from any browser on the network.
 
-- Tuas sine
-- Quem frigore tibi
-- Nec partim est excussum domos est
-- Corde Apolline poma rerum generis promissae
+---
 
-## Ultime divellere
+## Sections
 
-Sub robustior `portal_jfs_application` Argolicosque inposuit fecit. Mihi est
-relinquit tollere digni Mater requiemque Ceycis, die potes, se sic genetrix
-Pelasgas **arceat** sonanti colles.
+| Section | What's inside |
+|---|---|
+| [Getting Started](getting-started/) | Hardware wiring, firmware build & flash, first boot provisioning |
+| [Firmware Reference](firmware/) | Dual-core architecture, FreeRTOS tasks, I2S driver, state machine |
+| [WebSocket Protocol](websocket-protocol/) | Binary audio format, connection flow, building a compatible receiver |
+| [Server](server/) | Python server setup, Sarvam integration, web UI events |
 
-Deus magno, senatus dicimus urguere Cerealia; pictae illum, progenies et [ultima
-tempora](#ultime-divellere) fovet, nec. Arcana urbem: iacentis: ficta qui
-incursu fides et sati nec omnia ego Laetitia potura troades. Responsa subdit,
-pronepos coactus **Nycteliusque** licet se sepulcro tenus Pelasgae odoribus
-**absensauxilium**.
+---
 
-Loquar est obvertit: ubi: non possit pulsa: mihi. Nam irascere tellus! In
-rostro, dea rutilis, in gutture ulla publica minaces fuissem tristi et. Putes
-Cyclopum bello pericula vides Anguemque, sanctaque pia gaudent. Induiturque
-atria, dentibus virque *parabant lacrimis*, motus, sidere sorores pereunt
-pharetramque nocte et subde medio.
+## Architecture overview
+
+```
+┌─────────────────────────────────────┐
+│  ESP32-S3  (Core 1)                 │
+│  I2S → PCM convert → ws.sendBIN()  │
+└────────────────┬────────────────────┘
+                 │  WebSocket /audio
+                 │  binary frames (512 B each)
+                 ▼
+┌─────────────────────────────────────┐
+│  FastAPI server  (192.168.x.x:8765) │
+│  buffer 192 frames → WAV → Sarvam  │
+└───────────┬─────────────────────────┘
+            │  WebSocket /ws  (JSON events)
+            ▼
+┌─────────────────────────────────────┐
+│  Browser UI                         │
+│  live fragment + completed sentence │
+└─────────────────────────────────────┘
+```

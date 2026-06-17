@@ -1,8 +1,8 @@
 baseURL: http://0.0.0.0:1313/
-title: Documentation
+title: Parayu
 theme: hugo-book
 
-copyright: "This is a copyright placeholder"
+copyright: "Parayu — ESP32-S3 Audio Streaming"
 
 # Book configuration
 disablePathToLower: true
@@ -39,17 +39,16 @@ markup:
 
 menu:
   home:
-    - name: "Documentation"
+    - name: "Docs"
       pageRef: "/docs/"
       weight: 10
-    - name: "Github"
-      url: "https://github.com/alex-shpak/hugo-book/"
+    - name: "GitHub"
+      url: "https://github.com/Rishi-k-s/parayu"
       weight: 20
 
-  # before: []
   after:
-    - name: "Github"
-      url: "https://github.com/alex-shpak/hugo-book"
+    - name: "GitHub"
+      url: "https://github.com/Rishi-k-s/parayu"
       weight: 10
 
 taxonomies:
