@@ -11,7 +11,7 @@ The Parayu V2 PCB is a custom ESP32-S3 board designed in KiCad. It moves everyth
 
 > **V1 vs V2** — The V1 prototype uses an INMP441 breakout wired on a breadboard. The V2 PCB replaces it with a TDK MMICT5848-00-012 bottom-port I2S microphone soldered directly, and adds onboard power management, battery, and accelerometer. The firmware pin assignments and I2S config remain the same.
 
-**KiCad project files:** [`parayu_PCB/`](https://github.com/Rishi-k-s/parayu/tree/main/parayu_PCB)
+**KiCad project files:** [`parayu_PCB/`](https://github.com/Rishi-k-s/parayu_docs/tree/main/parayu_PCB)
 
 ---
 
