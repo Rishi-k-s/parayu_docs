@@ -1,0 +1,27 @@
+Sno,Item,Product URL,Quantity,Value,Designator,Description,Manufacturer,Manufacturer Part Number,Package,Supplier Part Number,Unit Price,Total
+1,ESP32-S3-WROOM-1-N16R8,https://www.digikey.in/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N16R8/16162642,1,,,RF TXRX MOD BT WIFI PCB TH SMD,Espressif Systems,ESP32-S3-WROOM-1-N16R8,5407-ESP32-S3-WROOM-1-N16R8TR-ND,5407-ESP32-S3-WROOM-1-N16R8TR-ND,638.89,638.89
+2,MMICT5848-00-012,https://www.digikey.in/en/products/detail/tdk-invensense/MMICT5848-00-012/18634578,2,,,BOTTOM PORT I2S DIGITAL OUTPUT M,TDK InvenSense,MMICT5848-00-012,1428-MMICT5848-00-012TR-ND,1428-MMICT5848-00-012TR-ND,223.99,447.98
+3,GoldenMorning 0.91 inch 128x32 Blue OLED Display Module with I2C/IIC Serial Interface,https://robu.in/product/0-91-inch-128x32-i2c-iic-serial-blue-oled-lcd-display-module/?gad_source=1&gad_campaignid=17416544847&gbraid=0AAAAADvLFWfmbNGQtAESE0d4xgU2SYP9F&gclid=CjwKCAjw857RBhAgEiwAI-1yKDo4ALjvME5SADEdUhiSMWYL8KFAapnk1ZLXaEDknRG9EP3y_zMKFxoCjXMQAvD_BwE,1,,,ÿ0.91 inch 128x32 Blue OLED Display Module offers 128x32 pixel resolution,GoldenMorning,,,62312,219,219
+4,MCP1700T-1802E/TT,https://www.digikey.in/en/products/detail/microchip-technology/MCP1700T-1802E-TT/652671,2,,,IC REG LINEAR 1.8V 200MA SOT23-3,Microchip Technology,MCP1700T-1802E/TT,SOT-23-3,MCP1700T1802ETTTR-ND,48.2,96.4
+5,AP7365-33WG-7,https://www.digikey.in/en/products/detail/diodes-incorporated/AP7365-33WG-7/4249847,1,,,IC REG LINEAR 3.3V 600MA SOT-25,Diodes Incorporated,AP7365-33WG-7,SOT-25,AP7365-33WG-7DITR-ND,26.46,26.46
+6,BQ25185DLHR,https://www.digikey.in/en/products/detail/texas-instruments/BQ25185DLHR/21769368?s=N4IgTCBcDaIEIEUwFYCMAOZIC6BfIA,1,,,"1-CELL, 1-A STAND-ALONE LINEAR B",Texas Instruments,BQ25185DLHR,10-WFDFN Exposed Pad,296-BQ25185DLHRTR-ND,215,215
+7,BQ29700DSER,https://www.digikey.in/en/products/detail/texas-instruments/BQ29700DSER/5973173,1,,,IC BATT PROT LI-ION 1CELL 6WSON,Texas Instruments,BQ29700DSER,6-WFDFN,296-43985-2-ND,53.87,53.87
+8,LIS2DH12TR,https://www.digikey.in/en/products/detail/stmicroelectronics/LIS2DH12TR/4899892?s=N4IgTCBcDaIDIEkDKYAiAJAjGAKgJRAF0BfIA,1,,,"ACCEL 2-16G I2C/SPI 12LGA, accelerometer",STMicroelectronics,LIS2DH12TR,12-VFLGA,497-14851-2-ND,169.17,169.17
+9,TXS0104EPWRG4,https://www.digikey.in/en/products/detail/texas-instruments/TXS0104EPWRG4/1910179,1,,,"IC XLTR VL BIDIR 14-TSSOP, level shifter",Texas Instruments,TXS0104EPWRG4,"14-TSSOP (0.173"", 4.40mm Width)",296-52841-2-ND,102.07,102.07
+10,USBLC6-2SC6,https://www.digikey.in/en/products/detail/shenzhen-slkormicro-semicon-co-ltd/USBLC6-2SC6/28143029,1,,,"6A@8/20US 13V 78W@8/20US 9V 5V S,ESD Protection","Shenzhen Slkormicro Semicon Co., Ltd.",USBLC6-2SC6,SOT-23-6,5399-USBLC6-2SC6TR-ND,16.07,16.07
+11,UJ20-C-H-G-SMT-1A-P16-TR,https://www.digikey.in/en/products/detail/same-sky-formerly-cui-devices/UJ20-C-H-G-SMT-1A-P16-TR/28173556,1,,,"USB JACK, TYPE C, 2.0, SMT, HORI",Same Sky (Formerly CUI Devices),UJ20-C-H-G-SMT-1A-P16-TR,,2223-UJ20-C-H-G-SMT-1A-P16-TR-ND,36.86,36.86
+12,SWT0220-016016GSA,https://www.digikey.in/en/products/detail/gct/SWT0220-016016GSA/26753069,2,,,"TACTILE SWITCH, SPST-NO, 5.2 X 5",GCT,SWT0220-016016GSA,,2073-SWT0220-016016GSATR-ND,9.45,18.9
+13,XL-1615RGBC-YG,https://robu.in/product/xl-1615rgbc-yg-xinglight-smd-4p1-6x1-5mm-rgb-leds-rohs/,3,,,"XL-1615RGBC-YG-XINGLIGHT-SMD-4P,1.6x1.5mm RGB LEDs ROHS",ÿXINGLIGHT,ÿXL-1615RGBC-YG,,"XL-1615RGBC-YG-XINGLIGHT-SMD-4P,1.6x1.5mm RGB LEDs ROHS",2.46,7.38
+14,NCU15XH103F60RC,https://www.digikey.in/en/products/detail/murata-electronics/NCU15XH103F60RC/9686714,1,,,THERMISTOR NTC 10KOHM 3380K 0402,Murata Electronics,NCU15XH103F60RC,0402 (1005 Metric),490-18149-2-ND,9.45,9.45
+15,0402B104J250NT,https://robu.in/product/0402b104j250nt-fh-25v-100nf-x7r%C2%B15-0402-multilayer-ceramic-capacitors-mlcc-smd-smt-rohs/?gad_source=1&gad_campaignid=17427802703&gbraid=0AAAAADvLFWen83H_P0UCOJpJDdBWxZdsP&gclid=CjwKCAjw857RBhAgEiwAI-1yKNizTIgTGy1dGKtjgZG22C-dQb0-s-HLYzrhsOl6iRaLDHuKrqRmcBoCyxkQAvD_BwE,15,100nF,,0402B104J250NT-FH -25V 100nF X7Rñ5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS,FH,0402B104J250NT,0402 (1005 Metric),,0.35,5.25
+17,CC0402MRX5R5BB106,https://robu.in/product/cc0402mrx5r5bb106-yageo-cap-smd-mlcc-10-%c2%b5f-6-3-v-0402-1005-metric-20-x5r-cc-series/,8,10æF,,"CC0402MRX5R5BB106 - YAGEO - MLCC SMD Capacitor - 10 uF, 6.3 V, 0402 [1005 Metric], 20%, X5R, CC Series",YAGEO,,,,8,64
+18,DMG2305UX-13,https://www.digikey.in/en/products/detail/diodes-incorporated/DMG2305UX-13/4251560,1,,,MOSFET P-CH 20V 4.2A SOT23,Diodes Incorporated,DMG2305UX-13,SOT-23-3,DMG2305UX-13DITR-ND,33.08,33.08
+19,RC0805FR-0710KL,https://robu.in/product/rc0805fr-0710kl-yageo-res-thick-film-0805-10k-ohm-1-0-125w1-8w-%c2%b1100ppm-c-pad-smd-t-r/,2,10Kê,,RC0805FR-0710KL-YAGEO-Res Thick Film 0805 10K Ohm 1% 0.125W(1/8W) ñ100ppm/øC Pad SMD T/R,,,0.0805,,0.8,1.6
+20,Yageo 100k Ohm,https://robu.in/product/yageo-100k-ohm-1-2w-0805-surface-mount-resistor-pack-of-50/,3,100Kê,,Yageo 100k Ohm 1/2W 0805 Surface Mount Resistor,Yageo,,,,0.54,1.62
+21,WLY102535,https://robu.in/product/950mah-pcm-protected-micro-li-po-battery/,1,ÿ950mAh,,WLY102535 3.7V 950mAh 1S LiPo Battery ? Micro Rechargeable Battery Pack for Wearables / Micro Drone / IoT,generic,,,,387,387
+22,,,,,,,,,,,,
+23,,,,,,,,,,,,
+24,,,,,,,,,,,,
+25,,,,,,,,,,,,
+26,,,,,,,,,,,,
+,,,,,,,,,,,SUM,2550.05
