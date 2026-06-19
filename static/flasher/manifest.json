@@ -1,0 +1,24 @@
+{
+  "name": "Parayu",
+  "version": "1.0.0",
+  "new_install_prompt_erase": false,
+  "builds": [
+    {
+      "chipFamily": "ESP32-S3",
+      "parts": [
+        {
+          "path": "https://github.com/Rishi-k-s/parayu/releases/latest/download/bootloader.bin",
+          "offset": 0
+        },
+        {
+          "path": "https://github.com/Rishi-k-s/parayu/releases/latest/download/partitions.bin",
+          "offset": 32768
+        },
+        {
+          "path": "https://github.com/Rishi-k-s/parayu/releases/latest/download/firmware.bin",
+          "offset": 65536
+        }
+      ]
+    }
+  ]
+}

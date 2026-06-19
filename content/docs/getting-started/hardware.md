@@ -2,7 +2,9 @@
 weight: 1
 ---
 
-# Hardware
+# Hardware (V1 Prototype)
+
+> This page covers the **V1 breadboard prototype** — an INMP441 breakout wired to an ESP32-S3 dev board. For the production custom PCB see [PCB — V2](../../pcb/).
 
 ## Components
 

@@ -1,4 +1,4 @@
-baseURL: http://0.0.0.0:1313/
+baseURL: https://rishi-k-s.github.io/parayu_docs/
 title: Parayu
 theme: hugo-book
 
@@ -43,12 +43,12 @@ menu:
       pageRef: "/docs/"
       weight: 10
     - name: "GitHub"
-      url: "https://github.com/Rishi-k-s/parayu"
+      url: "https://github.com/Rishi-k-s/parayu_docs"
       weight: 20
 
   after:
     - name: "GitHub"
-      url: "https://github.com/Rishi-k-s/parayu"
+      url: "https://github.com/Rishi-k-s/parayu_docs"
       weight: 10
 
 taxonomies:
